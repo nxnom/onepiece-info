@@ -1,12 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microverse</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Piece - Microverse Capstone Project</title>
+    <link rel="stylesheet" href="dist/output.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="scroll-smooth">
+    <header
+      class="py-4 absolute w-full z-10 left-0 top-0 md:shadow md:shadow-gray-300 bg-transparent md:bg-white md:fixed"
+    >
+      <div class="container flex items-center justify-between">
+        <a href="#" class="hidden md:block">
+          <img src="assets/images/logo.png" alt="logo" class="block h-10" />
+        </a>
+        <nav>
+          <button id="menu" type="button" class="relative block md:hidden">
+            <i class="fa-solid fa-bars text-2xl font-bold"></i>
+          </button>
+          <ul class="menu-list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Topics</a></li>
+            <li><a href="#">Voice Actors</a></li>
+            <li><a href="#">Sponsor</a></li>
+            <li>
+              <a
+                href="#"
+                class="border-2 border-primary px-3 py-2 text-primary transition-colors hover:bg-primary hover:text-white"
+              >
+                Join With Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="landing"
+        class="w-full bg-theme-bg relative bg-opacity-80 md:pt-12"
+      >
+        <img
+          src="assets/images/straw-hat-crew.png"
+          alt="straw-hat-crew"
+          class="absolute block object-contain h-auto bottom-0 opacity-50 -z-10 md:h-full w-full left-0 md:top-0"
+        />
+        <div
+          class="container min-h-screen flex flex-col items-start justify-center"
+        >
+          <h1 class="text-3xl text-primary">"Pirate King!"</h1>
+          <p
+            class="text-4xl font-bold font-cocogoose py-2 uppercase bg-flame from-primary to-orange-500 bg-clip-text text-transparent md:text-7xl"
+          >
+            Monkey D. Luffy<br />One Piece <span class="md:hidden">- ODA </span
+            ><span class="hidden md:block"> Eiichiro Oda</span>
+          </p>
+          <p
+            class="font-normal bg-theme-bg p-2 border-4 border-white text-theme-black my-4 md:p-4 md:max-w-xl"
+          >
+            The story follows Monkey D. Luffy, a young pirate whose body gains
+            the properties of rubber after unintentionally eating a Devil Fruit.
+          </p>
+          <p class="font-cocogoose font-bold text-2xl text-gray-600">
+            October 20, 1999 ~ current
+          </p>
+          <p class="text-gray-600 text-base">
+            EP1 - I'm Luffy! The Man Who Will Become the Pirate King!
+          </p>
+        </div>
+      </section>
+
+      <!-- Topic Section -->
+      <section
+        id="topic-section"
+        class="relative grid gap-2 place-items-center py-8 bg-[#22252A] bg-cross bg-repeat-space md:py-16"
+      >
+        <h4 class="text-xl text-white font-semibold">Topics</h4>
+        <div class="h-[1px] w-12 bg-primary mb-8"></div>
+
+        <div
+          class="container grid grid-cols-none my-3 gap-2 md:grid-cols-5 md:gap-0.5"
+        >
+          <div class="program-card">
+            <i class="fa-solid fa-fire"></i>
+            <h6>Characters</h6>
+            <p>
+              One Piece has a large cast of unique and interesting characters.
+            </p>
+          </div>
+          <div class="program-card">
+            <i class="fa-regular fa-arrow-trend-up"></i>
+            <h6>World</h6>
+            <p>
+              Filled with a wide range of locations, cultures, and mysteries
+            </p>
+          </div>
+          <div class="program-card">
+            <i class="fa-solid fa-comments"></i>
+            <h6>Story</h6>
+            <p>
+              Monkey D. Luffy and his friends as they search for the ultimate
+              treasure
+            </p>
+          </div>
+          <div class="program-card">
+            <i class="fa-brands fa-wikipedia-w"></i>
+            <h6>Designs</h6>
+            <p>
+              Vibrant colors, dynamic action scenes, and memorable character
+              designs
+            </p>
+          </div>
+          <div class="program-card">
+            <i class="fa-solid fa-comments"></i>
+            <h6>Theme</h6>
+            <p>
+              One Piece explores friendship, perseverance, and following dreams
+            </p>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="bg-primary py-4 px-6 text-gray-200 font-semibold mt-6 transition md:p-0 hover:bg-opacity-90 md:text-primary md:bg-transparent md:hover:underline"
+        >
+          Join One Piece Fan's Club
+        </button>
+      </section>
+
+      <!-- Actors Section -->
+      <section
+        id="actor-section"
+        class="container grid gap-2 place-items-center py-8 md:py-16"
+      >
+        <h4 class="text-xl text-black font-semibold">Voice Actors</h4>
+        <div class="h-0.5 w-12 bg-primary mb-8"></div>
+
+        <div class="grid gap-12 grid-cols-1 w-full md:grid-cols-2 my-4">
+          <div class="actor-card">
+            <img
+              src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRT6hIrAbadUNrr8WY9A4mOYMpUQMdbkupQ8jDPzHTNeVZ0gPpj"
+              alt="luffy"
+              class="actor-image"
+            />
+            <div class="actor-info">
+              <h5>Mayumi Tanaka</h5>
+              <h6>Monkey D. Luffy</h6>
+              <span></span>
+              <p>
+                田中 真弓, Tanaka Mayumi is a Japanese actress, voice actress
+                and narrator. She voiced Monkey D. Luffy in One Piece
+              </p>
+            </div>
+          </div>
+
+          <div class="actor-card">
+            <img
+              src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcQ3zy6ASOSaCe3sh0k14FnJMwXab8mSBOJkQq2RjCptvJCwy_ByiTpARqNGhU_3t7SVJ-2CehE_3Dz_ik4"
+              alt="zoro"
+              class="actor-image"
+            />
+            <div class="actor-info">
+              <h5>Wataru Takagi</h5>
+              <h6>Roronoa Zoro</h6>
+              <span></span>
+              <p>
+                高木 渉, Takagi Wataru is a Japanese voice actor and narrator.
+                He voiced Roronoa Zoro in One Piece
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="p-2 w-full text-gray-600 mt-8 transition border border-gray-300 rounded-sm hover:border-gray-600 md:hidden"
+        >
+          More
+        </button>
+      </section>
+
+      <!-- Partner Section  -->
+      <section
+        id="partner-section"
+        class="grid gap-2 place-items-center py-8 px-3 bg-[#2E2E2E]"
+      >
+        <h4 class="text-xl text-white font-semibold">Partner</h4>
+        <div class="h-[1px] w-12 bg-primary mb-4"></div>
+      </section>
+    </main>
+
+    <footer class="container flex items-center justify-center gap-8 py-8">
+      <div>creative <br />commons korea</div>
+      <p class="text-sm font-light">
+        2015 Creative Commons Korea. <br />Some Rights Reserved.
+      </p>
+    </footer>
+  </body>
 </html>
