@@ -14,23 +14,32 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="scripts/menu.js" defer></script>
   </head>
   <body>
     <header
-      class="py-4 absolute w-full z-10 left-0 top-0 md:shadow md:shadow-gray-300 bg-transparent md:bg-white md:fixed"
+      class="py-4 w-full z-10 left-0 top-0 bg-white fixed md:shadow md:shadow-gray-300"
     >
       <div class="container flex items-center justify-between">
         <a href="index.html" class="hidden md:block">
           <img src="assets/images/logo.png" alt="logo" class="block h-10" />
         </a>
         <nav>
-          <button id="menu" type="button" class="absolute z-10 block md:hidden">
+          <button id="menu-btn" type="button" class="z-10 block md:hidden">
             <i class="fa-solid fa-bars text-2xl font-bold"></i>
           </button>
           <ul class="menu-list">
-            <li class="text-primary"><a href="#">About</a></li>
+            <button
+              id="close-menu-btn"
+              type="button"
+              class="absolute left-4 top-4 md:hidden"
+            >
+              <i class="fa-solid fa-times text-3xl font-bold"></i>
+            </button>
+
+            <li class="text-primary"><a href="index.html">Home</a></li>
             <li><a href="index.html#topic-section">Topics</a></li>
-            <li><a href="index.html#actor-section">Voice Actors</a></li>
+            <li><a href="index.html#voice-actor-section">Voice Actors</a></li>
             <li><a href="index.html#partner-section">Partner</a></li>
             <li>
               <a
@@ -123,6 +132,7 @@
         <h4 class="text-2xl text-gray-800 font-semibold">
           See latest releases of One Piece
         </h4>
+        py-8 md:py-12 border-b-2 border-theme-bg
         <div class="h-[1px] w-8 bg-primary mb-2"></div>
         <p class="text-sm text-gray-400 mb-8">
           Take a look at amazing adventures of luffy and his crews in following

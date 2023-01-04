@@ -25,7 +25,7 @@
 
 @layer components {
   .menu-list {
-    @apply absolute top-0 -left-full w-full h-full flex flex-col gap-4 md:static md:flex-row md:gap-8;
+    @apply absolute opacity-0 top-0 -left-full w-full h-full flex flex-col gap-4 md:static md:flex-row md:gap-8 md:opacity-100 transition-opacity duration-500 md:transition-none;
   }
 
   .menu-list > li:not(:last-child):hover {
@@ -65,13 +65,44 @@
   }
 }
 
-/* Dynamic Contents */
+/* Handle Menu */
+@media (max-width: 767px) {
+  .show-menu {
+    @apply overflow-hidden;
+  }
+
+  .show-menu .menu-list {
+    @apply left-0 bg-white opacity-100 bg-opacity-50 backdrop-blur w-screen h-screen items-center justify-center gap-8 text-xl font-bold;
+  }
+
+  .show-menu #menu-btn {
+    @apply hidden;
+  }
+
+  .show-menu #close-menu-btn {
+    @apply block;
+  }
+}
+
+/* Voice Actor Section */
 .actor-card {
   @apply grid grid-cols-[auto_1fr] gap-4 bg-squares bg-no-repeat bg-[length:4rem_4rem] bg-opacity-10;
 }
 
+.show-less-actor .actor-card:nth-child(n + 3) {
+  @apply hidden md:grid;
+}
+
+.show-less-actor #voice-actor-btn-text {
+  @apply -top-full;
+}
+
+.show-less-actor #voice-actor-btn-icon {
+  @apply rotate-180;
+}
+
 .actor-image {
-  @apply w-32 h-32 object-cover pl-4 pt-4;
+  @apply w-28 h-28 object-cover pl-4 pt-4;
 }
 
 .actor-info {
@@ -88,4 +119,8 @@
 
 .actor-info span {
   @apply block w-4 h-[1px] bg-gray-500 my-1.5;
+}
+
+.actor-info p {
+  @apply text-xs text-gray-600;
 }

@@ -8,29 +8,56 @@
     <link rel="stylesheet" href="dist/output.css" />
 
     <link
+      rel="preload"
+      href="assets/fonts/CocogooseCompressed-Bold.woff"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="preload"
+      href="assets/fonts/CocogooseCompressed-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/voice-actors.js" defer></script>
   </head>
-  <body>
+  <body class="">
     <header
-      class="py-4 absolute w-full z-10 left-0 top-0 md:shadow md:shadow-gray-300 bg-transparent md:bg-white md:fixed"
+      class="py-4 w-full z-10 left-0 top-0 md:shadow md:shadow-gray-300 fixed bg-white"
     >
       <div class="container flex items-center justify-between">
         <a href="#" class="hidden md:block">
           <img src="assets/images/logo.png" alt="logo" class="block h-10" />
         </a>
         <nav>
-          <button id="menu" type="button" class="absolute block md:hidden">
+          <button id="menu-btn" type="button" class="block md:hidden">
             <i class="fa-solid fa-bars text-2xl font-bold"></i>
           </button>
           <ul class="menu-list">
+            <button
+              id="close-menu-btn"
+              type="button"
+              class="absolute left-4 top-4 md:hidden"
+            >
+              <i class="fa-solid fa-times text-3xl font-bold"></i>
+            </button>
+
             <li class="text-primary"><a href="about.html">About</a></li>
             <li><a href="#topic-section">Topics</a></li>
-            <li><a href="#actor-section">Voice Actors</a></li>
+            <li><a href="#voice-actor-section">Voice Actors</a></li>
             <li><a href="#partner-section">Partner</a></li>
             <li>
               <a
@@ -58,9 +85,9 @@
         <div
           class="container min-h-screen flex flex-col items-start justify-center"
         >
-          <h1 class="text-3xl text-primary">"Grand Line!"</h1>
+          <h1 class="text-2xl md:text-3xl text-primary">"Grand Line!"</h1>
           <p
-            class="text-4xl font-bold font-cocogoose py-2 uppercase bg-flame from-primary to-orange-500 bg-clip-text text-transparent md:text-7xl"
+            class="text-5xl font-bold font-cocogoose py-2 uppercase bg-flame from-primary to-orange-500 bg-clip-text text-transparent md:text-7xl"
           >
             Monkey D. Luffy<br />One Piece <span class="md:hidden">- ODA </span
             ><span class="hidden md:block"> Eiichiro Oda</span>
@@ -68,8 +95,7 @@
           <p
             class="font-normal bg-theme-bg p-2 border-4 border-white text-theme-black my-4 md:p-4 md:max-w-xl"
           >
-            The story follows Monkey D. Luffy, a young pirate whose body gains
-            the properties of rubber after unintentionally eating a Devil Fruit.
+            物語は、意図せずに悪魔の実を食べた後、体がゴムの特性を獲得した若い海賊、モンキー・D・ルフィに続きます。
           </p>
           <p class="font-cocogoose font-bold text-2xl text-gray-600">
             October 20, 1999 ~ current
@@ -140,53 +166,30 @@
 
       <!-- Actors Section -->
       <section
-        id="actor-section"
-        class="container scroll-m-8 grid gap-2 place-items-center py-8 md:py-16 md:scroll-m-16"
+        id="voice-actor-section"
+        class="show-less-actor container scroll-m-8 grid gap-2 place-items-center py-8 md:py-16 md:scroll-m-16"
       >
         <h4 class="text-xl text-black font-semibold">Voice Actors</h4>
         <div class="h-0.5 w-12 bg-primary mb-8"></div>
 
-        <div class="grid gap-12 grid-cols-1 w-full md:grid-cols-2 my-4">
-          <div class="actor-card">
-            <img
-              src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRT6hIrAbadUNrr8WY9A4mOYMpUQMdbkupQ8jDPzHTNeVZ0gPpj"
-              alt="luffy"
-              class="actor-image"
-            />
-            <div class="actor-info">
-              <h5>Mayumi Tanaka</h5>
-              <h6>Monkey D. Luffy</h6>
-              <span></span>
-              <p>
-                田中 真弓, Tanaka Mayumi is a Japanese actress, voice actress
-                and narrator. She voiced Monkey D. Luffy in One Piece
-              </p>
-            </div>
-          </div>
-
-          <div class="actor-card">
-            <img
-              src="http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcQ3zy6ASOSaCe3sh0k14FnJMwXab8mSBOJkQq2RjCptvJCwy_ByiTpARqNGhU_3t7SVJ-2CehE_3Dz_ik4"
-              alt="zoro"
-              class="actor-image"
-            />
-            <div class="actor-info">
-              <h5>Wataru Takagi</h5>
-              <h6>Roronoa Zoro</h6>
-              <span></span>
-              <p>
-                高木 渉, Takagi Wataru is a Japanese voice actor and narrator.
-                He voiced Roronoa Zoro in One Piece
-              </p>
-            </div>
-          </div>
+        <div
+          id="voice-actor-list"
+          class="grid gap-12 grid-cols-1 w-full md:grid-cols-2 my-4"
+        >
+          <!-- This will inject later from javascript -->
         </div>
 
         <button
+          id="voice-actor-btn"
           type="button"
-          class="p-2 w-full text-gray-600 mt-8 transition border border-gray-300 rounded-sm hover:border-gray-600 md:hidden"
+          class="flex items-center justify-center gap-1 p-2 w-full text-gray-600 mt-8 transition border border-gray-300 rounded-sm hover:border-gray-600 md:hidden"
         >
-          More
+          <!-- prettier-ignore -->
+          <span class="inline-block relative text-base w-10 overflow-hidden h-6" >
+            <span id="voice-actor-btn-text" class="absolute left-0" >Less More</span >
+          </span>
+          <!-- prettier-ignore -->
+          <i id="voice-actor-btn-icon" class="mt-[1px] text-sm fas fa-chevron-up" ></i>
         </button>
       </section>
 
