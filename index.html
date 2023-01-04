@@ -15,7 +15,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="scroll-smooth">
+  <body>
     <header
       class="py-4 absolute w-full z-10 left-0 top-0 md:shadow md:shadow-gray-300 bg-transparent md:bg-white md:fixed"
     >
@@ -24,14 +24,14 @@
           <img src="assets/images/logo.png" alt="logo" class="block h-10" />
         </a>
         <nav>
-          <button id="menu" type="button" class="relative block md:hidden">
+          <button id="menu" type="button" class="absolute block md:hidden">
             <i class="fa-solid fa-bars text-2xl font-bold"></i>
           </button>
           <ul class="menu-list">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Topics</a></li>
-            <li><a href="#">Voice Actors</a></li>
-            <li><a href="#">Sponsor</a></li>
+            <li class="text-primary"><a href="about.html">About</a></li>
+            <li><a href="#topic-section">Topics</a></li>
+            <li><a href="#actor-section">Voice Actors</a></li>
+            <li><a href="#partner-section">Partner</a></li>
             <li>
               <a
                 href="#"
@@ -58,7 +58,7 @@
         <div
           class="container min-h-screen flex flex-col items-start justify-center"
         >
-          <h1 class="text-3xl text-primary">"Pirate King!"</h1>
+          <h1 class="text-3xl text-primary">"Grand Line!"</h1>
           <p
             class="text-4xl font-bold font-cocogoose py-2 uppercase bg-flame from-primary to-orange-500 bg-clip-text text-transparent md:text-7xl"
           >
@@ -83,7 +83,7 @@
       <!-- Topic Section -->
       <section
         id="topic-section"
-        class="relative grid gap-2 place-items-center py-8 bg-[#22252A] bg-cross bg-repeat-space md:py-16"
+        class="relative scroll-m-8 grid gap-2 place-items-center py-8 bg-[#22252A] bg-cross bg-repeat-space md:scroll-m-16 md:py-16"
       >
         <h4 class="text-xl text-white font-semibold">Topics</h4>
         <div class="h-[1px] w-12 bg-primary mb-8"></div>
@@ -91,38 +91,38 @@
         <div
           class="container grid grid-cols-none my-3 gap-2 md:grid-cols-5 md:gap-0.5"
         >
-          <div class="program-card">
-            <i class="fa-solid fa-fire"></i>
+          <div class="topic-card">
+            <img src="assets/icons/alien.svg" alt="alien" />
             <h6>Characters</h6>
             <p>
               One Piece has a large cast of unique and interesting characters.
             </p>
           </div>
-          <div class="program-card">
-            <i class="fa-regular fa-arrow-trend-up"></i>
+          <div class="topic-card">
+            <img src="assets/icons/pluto.svg" alt="world" />
             <h6>World</h6>
             <p>
               Filled with a wide range of locations, cultures, and mysteries
             </p>
           </div>
-          <div class="program-card">
-            <i class="fa-solid fa-comments"></i>
+          <div class="topic-card">
+            <img src="assets/icons/chat.svg" alt="story" />
             <h6>Story</h6>
             <p>
               Monkey D. Luffy and his friends as they search for the ultimate
               treasure
             </p>
           </div>
-          <div class="program-card">
-            <i class="fa-brands fa-wikipedia-w"></i>
+          <div class="topic-card">
+            <img src="assets/icons/puzzle.svg" alt="design" />
             <h6>Designs</h6>
             <p>
               Vibrant colors, dynamic action scenes, and memorable character
               designs
             </p>
           </div>
-          <div class="program-card">
-            <i class="fa-solid fa-comments"></i>
+          <div class="topic-card">
+            <img src="assets/icons/flag.svg" alt="theme" />
             <h6>Theme</h6>
             <p>
               One Piece explores friendship, perseverance, and following dreams
@@ -141,7 +141,7 @@
       <!-- Actors Section -->
       <section
         id="actor-section"
-        class="container grid gap-2 place-items-center py-8 md:py-16"
+        class="container scroll-m-8 grid gap-2 place-items-center py-8 md:py-16 md:scroll-m-16"
       >
         <h4 class="text-xl text-black font-semibold">Voice Actors</h4>
         <div class="h-0.5 w-12 bg-primary mb-8"></div>
@@ -193,18 +193,60 @@
       <!-- Partner Section  -->
       <section
         id="partner-section"
-        class="grid gap-2 place-items-center py-8 px-3 bg-[#2E2E2E]"
+        class="grid gap-2 place-items-center py-8 px-3 bg-[#414246] md:py-12"
       >
         <h4 class="text-xl text-white font-semibold">Partner</h4>
-        <div class="h-[1px] w-12 bg-primary mb-4"></div>
+        <div class="h-[1px] w-12 bg-primary mb-8"></div>
+
+        <div
+          class="container grid grid-rows-1 grid-cols-6 gap-y-8 gap-x-4 place-items-center mb-4 md:flex md:items-center md:justify-center md:gap-10 md:mb-6"
+        >
+          <img
+            src="assets/icons/kyoto-animation.svg"
+            alt="kyoto-animation"
+            class="w-12 col-start-1 col-end-3 opacity-70 md:ml-16"
+          />
+          <img
+            src="assets/icons/funimation.svg"
+            alt="studio-ghibli"
+            class="w-28 col-start-3 col-end-5 opacity-70"
+          />
+          <img
+            src="assets/icons/toei-animation.svg"
+            alt="toei-animation"
+            class="w-20 col-start-5 col-end-7"
+          />
+          <img
+            src="assets/icons/dandelion.svg"
+            alt="dandelion"
+            class="w-28 col-start-2 col-end-4"
+          />
+          <img
+            src="assets/icons/studio-ghibli.svg"
+            alt="funimation"
+            class="w-28 col-start-4 col-end-6"
+          />
+        </div>
       </section>
     </main>
 
-    <footer class="container flex items-center justify-center gap-8 py-8">
-      <div>creative <br />commons korea</div>
-      <p class="text-sm font-light">
-        2015 Creative Commons Korea. <br />Some Rights Reserved.
-      </p>
+    <footer
+      class="container flex items-start justify-center gap-4 py-8 md:gap-8"
+    >
+      <img
+        src="assets/images/logo.png"
+        alt="logo"
+        class="block h-8 md:h-10 mt-1"
+      />
+      <div class="text-sm">
+        <p>
+          Copyright (C) 2023 One Piece Project. <br class="md:hidden" />All
+          Rights Reserved.
+        </p>
+        <p class="hidden md:block font-light mt-2">
+          このサイトは著作権法により保護されており、権利者の許可なく、記事、写真、画像などを無断で使用することはできません。
+        </p>
+      </div>
     </footer>
   </body>
 </html>

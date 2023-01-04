@@ -14,8 +14,12 @@
 }
 
 @layer base {
-  body {
+  :root {
     font-family: 'Lato', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
 
@@ -28,25 +32,42 @@
     @apply text-primary;
   }
 
-  .program-card {
-    @apply grid grid-cols-[3rem_6rem_1fr] w-full place-items-center gap-2 bg-white bg-opacity-10 p-4 md:py-6 md:grid-cols-none md:grid-rows-[auto_auto_1fr] md:text-center;
+  .topic-card {
+    @apply grid grid-cols-[4rem_6rem_1fr] w-full place-items-center gap-2 bg-white bg-opacity-10 p-4 md:py-6 md:grid-cols-none md:grid-rows-[auto_auto_1fr] md:text-center;
   }
 
-  .program-card i {
-    @apply text-3xl text-gray-300;
+  .topic-card img {
+    @apply h-14;
   }
 
-  .program-card h6 {
+  .topic-card h6 {
     @apply text-primary text-lg font-bold text-left w-full md:text-xl md:text-center;
   }
 
-  .program-card p {
+  .topic-card p {
     @apply text-gray-200 self-start text-sm md:text-base;
+  }
+
+  .film-image {
+    @apply block flex-1 aspect-video bg-cover bg-center bg-no-repeat relative;
+  }
+
+  .film-image::before {
+    @apply content-[''] block w-full h-full bg-red-500 bg-opacity-70;
+  }
+
+  .film-image div {
+    @apply absolute w-full h-full top-0 left-0 text-white flex flex-col items-center justify-center;
+  }
+
+  .film-image h6 {
+    @apply text-3xl font-extrabold;
   }
 }
 
+/* Dynamic Contents */
 .actor-card {
-  @apply grid grid-cols-[auto_1fr] gap-3 bg-squares bg-no-repeat bg-[length:4rem_4rem] bg-opacity-10;
+  @apply grid grid-cols-[auto_1fr] gap-4 bg-squares bg-no-repeat bg-[length:4rem_4rem] bg-opacity-10;
 }
 
 .actor-image {
@@ -66,5 +87,5 @@
 }
 
 .actor-info span {
-  @apply block w-4 h-[1px] bg-gray-500 my-2;
+  @apply block w-4 h-[1px] bg-gray-500 my-1.5;
 }
