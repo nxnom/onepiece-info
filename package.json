@@ -4,8 +4,15 @@
   "description": "HTML,CSS & JS template for Microverse. All linters and readme file included.",
   "main": "index.html",
   "scripts": {
+    "dev": "yarn tailwindcss -i ./styles/input.css -o ./dist/output.css --watch",
+    "develop": "npx tailwindcss -i ./styles/input.css -o ./dist/output.css --watch",
     "linters": "yarn hint . && yarn run-stylelint && yarn eslint .",
-    "run-stylelint": "stylelint \"**/*.css\""
+    "run-stylelint": "stylelint \"**/*.css\"",
+    "build": "yarn tailwindcss -i ./styles/input.css -o ./dist/output.css -m",
+    "delete-branch": "git push origin :gh-pages && git branch -D gh-pages",
+    "setup-gh-pages": "git rm -r --cache . && git add *.html dist assets scripts -f && git commit -m 'deploy' && git push origin gh-pages",
+    "init-deploy": "git checkout -b gh-pages  && yarn build && yarn setup-gh-pages",
+    "deploy": "yarn delete-branch && git checkout -b gh-pages  && yarn build && yarn setup-gh-pages"
   },
   "keywords": [
     "Microverse"
@@ -21,6 +28,7 @@
     "stylelint": "13.x",
     "stylelint-config-standard": "21.x",
     "stylelint-csstree-validator": "1.x",
-    "stylelint-scss": "3.x"
+    "stylelint-scss": "3.x",
+    "tailwindcss": "^3.2.4"
   }
 }

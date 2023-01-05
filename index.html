@@ -1,12 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microverse</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Piece - Microverse Capstone Project</title>
+    <link rel="stylesheet" href="dist/output.css" />
+
+    <link
+      rel="preload"
+      href="assets/fonts/CocogooseCompressed-Bold.woff"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="preload"
+      href="assets/fonts/CocogooseCompressed-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/voice-actors.js" defer></script>
+  </head>
+  <body>
+    <header
+      class="w-full z-10 left-0 top-0 md:shadow md:shadow-gray-300 fixed bg-white"
+    >
+      <div class="bg-[#22252a]">
+        <div
+          class="container text-sm hidden items-center justify-end gap-3 text-white font-normal py-1 md:flex"
+        >
+          <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+          <a href="#"> <i class="fab fa-twitter"></i> </a>
+          <a href="#">English</a>
+          <a href="#">My Page</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+      <div class="py-4 container flex items-center justify-between">
+        <a href="#" class="hidden md:block">
+          <img src="assets/images/logo.png" alt="logo" class="block h-10" />
+        </a>
+        <nav>
+          <button id="menu-btn" type="button" class="block md:hidden">
+            <i class="fa-solid fa-bars text-2xl font-bold"></i>
+          </button>
+          <ul class="menu-list">
+            <button
+              id="close-menu-btn"
+              type="button"
+              class="absolute left-4 top-4 md:hidden"
+            >
+              <i class="fa-solid fa-times text-3xl font-bold"></i>
+            </button>
+
+            <li class="text-primary"><a href="about.html">About</a></li>
+            <li><a href="#topic-section">Topics</a></li>
+            <li><a href="#voice-actor-section">Voice Actors</a></li>
+            <li><a href="#partner-section">Partner</a></li>
+            <li>
+              <a
+                href="#"
+                class="border-2 border-primary px-3 py-2 text-primary transition-colors hover:bg-primary hover:text-white"
+              >
+                Join With Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="landing"
+        class="w-full bg-theme-bg relative bg-opacity-80 md:pt-12"
+      >
+        <img
+          src="assets/images/straw-hat-crew.png"
+          alt="straw-hat-crew"
+          class="absolute block object-contain h-auto bottom-0 opacity-50 -z-10 md:h-full w-full left-0 md:top-0"
+        />
+        <div
+          class="container min-h-screen flex flex-col items-start justify-center"
+        >
+          <h1 class="text-2xl md:text-3xl text-primary">"Grand Line!"</h1>
+          <p
+            class="text-5xl font-bold font-cocogoose py-2 uppercase bg-flame from-primary to-orange-500 bg-clip-text text-transparent md:text-7xl"
+          >
+            Monkey D. Luffy<br />One Piece <span class="md:hidden">- ODA </span
+            ><span class="hidden md:block"> Eiichiro Oda</span>
+          </p>
+          <p
+            class="font-normal bg-theme-bg p-2 border-4 border-white text-theme-black my-4 md:p-4 md:max-w-xl"
+          >
+            物語は、意図せずに悪魔の実を食べた後、体がゴムの特性を獲得した若い海賊、モンキー・D・ルフィに続きます。
+          </p>
+          <p class="font-cocogoose font-bold text-2xl text-gray-600">
+            October 20, 1999 ~ current
+          </p>
+          <p class="text-gray-600 text-base">
+            EP1 - I'm Luffy! The Man Who Will Become the Pirate King!
+          </p>
+        </div>
+      </section>
+
+      <!-- Topic Section -->
+      <section
+        id="topic-section"
+        class="relative scroll-m-8 grid gap-2 place-items-center py-8 bg-[#22252A] bg-cross bg-repeat-space md:scroll-m-16 md:py-16"
+      >
+        <h4 class="text-xl text-white font-semibold">Topics</h4>
+        <div class="h-[1px] w-12 bg-primary mb-8"></div>
+
+        <div
+          class="container grid grid-cols-none my-3 gap-2 md:grid-cols-5 md:gap-0.5"
+        >
+          <div class="topic-card">
+            <img src="assets/icons/alien.svg" alt="alien" />
+            <h6>Characters</h6>
+            <p>
+              One Piece has a large cast of unique and interesting characters.
+            </p>
+          </div>
+          <div class="topic-card">
+            <img src="assets/icons/pluto.svg" alt="world" />
+            <h6>World</h6>
+            <p>
+              Filled with a wide range of locations, cultures, and mysteries
+            </p>
+          </div>
+          <div class="topic-card">
+            <img src="assets/icons/chat.svg" alt="story" />
+            <h6>Story</h6>
+            <p>
+              Monkey D. Luffy and his friends as they search for the ultimate
+              treasure
+            </p>
+          </div>
+          <div class="topic-card">
+            <img src="assets/icons/puzzle.svg" alt="design" />
+            <h6>Designs</h6>
+            <p>
+              Vibrant colors, dynamic action scenes, and memorable character
+              designs
+            </p>
+          </div>
+          <div class="topic-card">
+            <img src="assets/icons/flag.svg" alt="theme" />
+            <h6>Theme</h6>
+            <p>
+              One Piece explores friendship, perseverance, and following dreams
+            </p>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="bg-primary py-4 px-6 text-gray-200 font-semibold mt-6 transition md:p-0 hover:bg-opacity-90 md:underline md:text-white md:bg-transparent md:hover:text-primary md:hover:underline"
+        >
+          Join One Piece Fan's Club
+        </button>
+      </section>
+
+      <!-- Actors Section -->
+      <section
+        id="voice-actor-section"
+        class="show-less-actor container scroll-m-8 grid gap-2 place-items-center py-8 md:py-16 md:scroll-m-16"
+      >
+        <h4 class="text-xl text-black font-semibold">Voice Actors</h4>
+        <div class="h-0.5 w-12 bg-primary mb-8"></div>
+
+        <div
+          id="voice-actor-list"
+          class="grid gap-12 grid-cols-1 w-full md:grid-cols-2 my-4"
+        >
+          <!-- This will inject later from javascript -->
+        </div>
+
+        <button
+          id="voice-actor-btn"
+          type="button"
+          class="flex items-center justify-center gap-1 p-2 w-full text-gray-600 mt-8 transition border border-gray-300 rounded-sm hover:border-gray-600 md:hidden"
+        >
+          <!-- prettier-ignore -->
+          <span class="inline-block relative text-base w-10 overflow-hidden h-6" >
+            <span id="voice-actor-btn-text" class="absolute left-0" >Less More</span >
+          </span>
+          <!-- prettier-ignore -->
+          <i id="voice-actor-btn-icon" class="mt-[1px] text-sm fas fa-chevron-up" ></i>
+        </button>
+      </section>
+
+      <!-- Partner Section  -->
+      <section
+        id="partner-section"
+        class="grid gap-2 place-items-center py-8 px-3 bg-[#414246] md:py-12"
+      >
+        <h4 class="text-xl text-white font-semibold">Partner</h4>
+        <div class="h-[1px] w-12 bg-primary mb-8"></div>
+
+        <div
+          class="container grid grid-rows-1 grid-cols-6 gap-y-8 gap-x-4 place-items-center mb-4 md:flex md:items-center md:justify-center md:gap-10 md:mb-6"
+        >
+          <img
+            src="assets/icons/kyoto-animation.svg"
+            alt="kyoto-animation"
+            class="w-12 col-start-1 col-end-3 opacity-70 md:ml-16"
+          />
+          <img
+            src="assets/icons/funimation.svg"
+            alt="studio-ghibli"
+            class="w-28 col-start-3 col-end-5 opacity-70"
+          />
+          <img
+            src="assets/icons/toei-animation.svg"
+            alt="toei-animation"
+            class="w-20 col-start-5 col-end-7"
+          />
+          <img
+            src="assets/icons/dandelion.svg"
+            alt="dandelion"
+            class="w-28 col-start-2 col-end-4"
+          />
+          <img
+            src="assets/icons/studio-ghibli.svg"
+            alt="funimation"
+            class="w-28 col-start-4 col-end-6"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="container flex items-start justify-center gap-4 py-8 md:gap-8"
+    >
+      <img
+        src="assets/images/logo.png"
+        alt="logo"
+        class="block h-8 md:h-10 mt-1"
+      />
+      <div class="text-sm">
+        <p>
+          Copyright (C) 2023 One Piece Project. <br class="md:hidden" />All
+          Rights Reserved.
+        </p>
+        <p class="hidden md:block font-light mt-2">
+          このサイトは著作権法により保護されており、権利者の許可なく、記事、写真、画像などを無断で使用することはできません。
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
