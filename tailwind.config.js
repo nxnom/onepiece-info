@@ -28,6 +28,8 @@ module.exports = {
         cross: "url('../assets/images/cross.png')",
         flame: "url('../assets/images/flame.jpg')",
         squares: "url('../assets/images/squares.png')",
+        'red-film': "url('../assets/images/onepiece-red-film.jpg')",
+        'stampede-film': "url('../assets/images/onepiece-stampede-film.jpg')",
       },
     },
   },
