@@ -25,9 +25,9 @@ module.exports = {
         cocogoose: ['Cocogoose Compressed', 'sans-serif'],
       },
       backgroundImage: {
-        cross: "url('/assets/images/cross.png')",
-        flame: "url('/assets/images/flame.jpg')",
-        squares: "url('/assets/images/squares.png')",
+        cross: "url('../assets/images/cross.png')",
+        flame: "url('../assets/images/flame.jpg')",
+        squares: "url('../assets/images/squares.png')",
       },
     },
   },
