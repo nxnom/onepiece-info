@@ -33,7 +33,7 @@
   }
 
   .topic-card {
-    @apply grid grid-cols-[4rem_6rem_1fr] w-full place-items-center gap-2 bg-white bg-opacity-10 p-4 md:py-6 md:grid-cols-none md:grid-rows-[auto_auto_1fr] md:text-center;
+    @apply grid grid-cols-[4rem_6rem_1fr] w-full place-items-center gap-2 bg-white bg-opacity-10 border-2 border-transparent p-4 md:py-6 md:grid-cols-none md:grid-rows-[auto_auto_1fr] md:text-center hover:border-white;
   }
 
   .topic-card img {
