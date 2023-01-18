@@ -9,8 +9,8 @@
     "build": "tailwindcss -i ./styles/input.css -o ./dist/output.css -m",
     "delete-branch": "git push origin :gh-pages && git branch -D gh-pages",
     "setup-gh-pages": "git rm -r --cache . && git add *.html dist assets scripts -f && git commit -m 'deploy' && git push origin gh-pages",
-    "init-deploy": "git checkout -b gh-pages  && yarn build && yarn setup-gh-pages",
-    "deploy": "yarn delete-branch && git checkout -b gh-pages  && yarn build && yarn setup-gh-pages"
+    "init-deploy": "git checkout -b gh-pages  && npm run build && npm run setup-gh-pages",
+    "deploy": "npm run delete-branch && git checkout -b gh-pages  && npm run build && npm run setup-gh-pages"
   },
   "keywords": [
     "Microverse"
