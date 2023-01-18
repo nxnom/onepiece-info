@@ -92,7 +92,7 @@ Install this project with:
 To run the project, execute the following command to compiled tailwindcss to vanilla css:
 
 ```sh
-  npm run develop
+  npm run dev
 ```
 
 > and then Open the project with `Live server` or similar tools.
